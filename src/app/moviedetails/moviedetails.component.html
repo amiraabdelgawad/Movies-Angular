@@ -1,0 +1,17 @@
+<div class="container">
+<div class="row py-5" *ngIf="movieDetails.poster_path">
+    <div class="col-md-5 text-center">
+        <img [src]="imgPrefix+movieDetails.poster_path" class="w-90" alt="">
+    </div>
+
+    <div class="col-md-6">
+        <h3 class="py-3">{{movieDetails.title}}</h3>
+        <span *ngFor="let movieType of movieDetails.genres" class="type">{{movieType.name}}</span>
+        <div class="my-4">Vote : {{movieDetails.vote_average}}</div>
+        <div class="my-4">Vote count : {{movieDetails.vote_count}}</div>
+        <div class="my-4">Popularity : {{movieDetails.popularity}}</div>
+        <div class="my-4">Release Date : {{movieDetails.release_date}}</div>
+        <div class="my-4 second-color">{{movieDetails.overview}}</div>
+    </div>
+</div>
+</div>

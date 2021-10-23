@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300&display=swap');
+body{
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: #131722 !important;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff !important;
+    transition: all 0.3s ease-in-out;
+}
+a:hover{
+    color: #24baef !important;
+    cursor: pointer;
+}
+.second-color{
+    color: #949cb0 !important;
+}
+.p-style{
+    padding-top: 70px;
+}
+.alert{
+    background-color: transparent;
+    border: none;
+    color: #d52e3d;
+    padding: 0;
+}
+.vote{
+    background-color: #24baef;
+    padding: 5px;
+    font-weight: 900;
+    color: #fff;
+    right: 5px;
+    width: 30px;
+    height: 30;
+    text-align: center;
+}
+.page-link{
+    background-color: transparent !important;
+    color: #949cb0 !important;
+    border-color: #949cb0;
+}
+
+.activeNumber{
+    background-color: #949cb0 !important;
+    color: #24baef !important;
+    font-weight: 600;
+}
+.nullImg{
+    background-color: #24baef;
+    height: 75%;
+    color: #fff;
+    font-weight: 600;
+    background-image: url(./assets/logo-dark.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+}

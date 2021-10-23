@@ -1,0 +1,19 @@
+ul li a i{
+    font-size: 20px;
+}
+.navbar{
+    background-color: #131722 !important;
+}
+
+.nav-link{
+    padding: 0;
+    margin-right:10px;
+}
+.nav-item ul li a{
+    color:#131722 !important;
+    transition: all 0.3s ease-in-out;
+}
+.nav-item ul li a:hover{
+    color: #24baef !important;
+    cursor: pointer;
+}

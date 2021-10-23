@@ -1,0 +1,62 @@
+<app-header [headerTrendingMovies]='trendingMovies'></app-header>
+
+<div class="container">
+    <div class="row">
+    <div class="col-lg-4">
+        <div class="brdr my-5 w-25"></div>
+        <h2>Trending Movies <br>To Watch Right Now</h2>
+        <p class="second-color">Trending Movies To Watch Right Now</p>
+        <div class="brdr my-5 w-25"></div>
+    </div>
+
+    <div *ngFor="let movie of trendingMovies" class="col-lg-2 col-md-4 col-sm-6">
+        <div [routerLink]="['/moviedetails',movie.id]" [ngClass]="{nullImg: movie.poster_path == null}"  class="movie mb-4 position-relative">
+            <img [src]="imgPrefix+movie.poster_path" class="w-100" alt="">
+            <h2 class="h5 mt-2 text-center">{{movie.title}}</h2>
+
+            <div class="vote position-absolute top-0">
+                {{movie.vote_average}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row py-5">
+    <div class="col-lg-4">
+        <div class="brdr my-5 w-25"></div>
+        <h2>Trending Tv <br>To Watch Right Now</h2>
+        <p class="second-color">Trending Tv To Watch Right Now</p>
+        <div class="brdr my-5 w-25"></div>
+    </div>
+
+    <div *ngFor="let tv of trendingTv" class="col-lg-2 col-md-4 col-sm-6">
+        <div [ngClass]="{nullImg: tv.poster_path == null}" class="tv mb-4 position-relative">
+            <img [src]="imgPrefix+tv.poster_path" class="w-100" alt="">
+            <h2 class="h5 mt-2 text-center">{{tv.name}}</h2>
+
+            <div class="vote position-absolute top-0">
+                {{tv.vote_average}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row py-5">
+    <div class="col-lg-4">
+        <div class="brdr my-5 w-25"></div>
+        <h2>Trending People <br>To Watch Right Now</h2>
+        <p class="second-color">Trending People To Watch Right Now</p>
+        <div class="brdr my-5 w-25"></div>
+    </div>
+
+    <div *ngFor="let people of trendingPeople" class="col-lg-2 col-md-4 col-sm-6">
+        <div [ngClass]="{nullImg: people.profile_path == null}" class="people mb-4 ">
+            <img [src]="imgPrefix+people.profile_path" class="w-100" alt="">
+            <h2 class="h5 mt-2 text-center">{{people.name}}</h2>
+        </div>
+    </div>
+</div>
+</div>
+

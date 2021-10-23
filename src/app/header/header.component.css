@@ -1,0 +1,10 @@
+header{
+    background-image: url(../../assets/header.webp);
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+h1{
+    font-size: 60px;
+    font-weight: 900;
+}

@@ -1,0 +1,39 @@
+<div class="container">
+    <h1 class="text-center m-4">Popular Movies</h1>
+
+    <div class="page d-flex justify-content-center mb-4">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a (click)='displayPrevious()' class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+                <li *ngFor="let number of pagesNumber"  >
+                    <a (click)= 'displayMovies(number)' [ngClass]="{activeNumber: isActive(number)}" class="page-link">{{number}}</a>
+                </li>
+
+                <li class="page-item">
+                    <a (click)='displayNext()' class="page-link" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+
+    <div class="row">
+        <div *ngFor="let movie of PopularMovies" class="col-lg-3 col-md-4 col-sm-12">
+            <div [routerLink]="['/moviedetails',movie.id]" class="movie mb-4 position-relative">
+                <img [src]="imgPrefix+movie.poster_path" class="w-100" alt="">
+                <h2 class="h5 mt-2 text-center">{{movie.title}}</h2>
+
+                <div class="vote position-absolute top-0">
+                    {{movie.vote_average}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

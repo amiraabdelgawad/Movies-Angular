@@ -1,0 +1,35 @@
+<div class="container">
+    <h1 class="text-center m-4">Popular People</h1>
+
+    <div class="page d-flex justify-content-center mb-4">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a (click)='displayPrevious()' class="page-link" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+
+                <li *ngFor="let number of pagesNumber"  >
+                    <a (click)= 'displayPeople(number)' [ngClass]="{activeNumber: isActive(number)}" class="page-link">{{number}}</a>
+                </li>
+
+                <li class="page-item">
+                    <a (click)='displayNext()' class="page-link" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    
+
+    <div class="row">
+        <div *ngFor="let person of PopularPeople"  class="col-lg-2 col-md-3 col-sm-6" >
+            <div [ngClass]="{nullImg: person.profile_path == null}" class="movie mb-4">
+                <img [src]="imgPrefix+person.profile_path" class="w-100" alt="">
+                <h2 class="h5 mt-2 text-center">{{person.name}}</h2>
+            </div>
+        </div>
+    </div>
+</div>

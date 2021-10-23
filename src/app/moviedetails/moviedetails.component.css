@@ -1,0 +1,14 @@
+.type{
+    background-color: #24baef;
+    padding: 8px 8px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+}
+.w-90{
+    width: 90%;
+}
+.text-grey{
+    color: #eee;
+}
